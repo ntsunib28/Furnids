@@ -1,0 +1,361 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    background-color: black;
+    height: 100%;
+}
+body{
+    background-image: 
+    linear-gradient(rgba(2, 9, 37, 0.7), rgba(2, 9, 37, 0.7)), url(../assets/Furnitures/FurnitBG.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    color: aliceblue;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
+}
+nav{
+    width: 100vw;
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(2, 9, 37, 0.5);
+}
+.logo{
+    font-family: 'Lobster', cursive;
+    color:antiquewhite;
+    font-size: 18px;
+    font-weight: bolder;
+}
+nav a.logo{
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: chocolate;
+    display: block;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/* Home Content */
+.home-content{
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.text-box{
+    width: 90%;
+    color: aliceblue;
+    position: absolute;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+.text-box h1{
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+}
+.text-box p{
+    font-size: 15px;
+    margin: 10px 0 40px;
+}
+
+/* About Us Content */
+.about{
+    width: 80%;
+    padding: 100px 0 70px;
+}
+.about-container{
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+.about-content h3{
+    text-align: center;
+    color: rgb(127, 112, 95); 
+    font-size: 40px;
+    margin: 0 12px;
+}
+.about-content p{
+    text-align: justify;
+    color:rgb(14, 24, 68);
+    margin-right: 20px;
+    font-size: 20px;
+    margin: 12px;
+}
+.about-container img{
+    padding: 5px;
+    opacity: 0.9;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+/* Furnitures Content */
+.furnitures{
+    width: 80%;
+    text-align: center;
+    padding: 100px 0 70px;
+}
+.furnitures h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+.furnitures p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.furnitures-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.furnitures-col img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(14, 24, 68, 0.7);
+}
+.layer h3{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Lobster', cursive;
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom:50%;
+    opacity: 1;
+}
+
+
+/* Form Container */
+.container{
+    background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/Furnitures/Chair.jpg);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(2, 9, 37);
+    width: 100%;
+    margin: 40px 0;
+    max-width: 700px;
+    padding: 25px 30px;
+    /* background: linear-gradient(135deg, rgb(9, 62, 116), aliceblue); */
+    border-radius: 10px;
+}
+.container .title{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+    top: 0;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: rgb(2, 9, 37);
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: 0.5;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: rgb(2, 9, 37);
+}
+
+form .gender-details .gender-title{
+    font-size: 20px;
+}
+form .gender-details .category{
+    display: flex;
+    width: 55%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border-radius: 5px solid transparent;
+    transition: all 0.3 ease;
+}
+#male:checked ~ .category label .one,
+#female:checked ~ .category label .two{
+    border-color: #d9d9d9;
+    background: rgb(2, 9, 37);
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 45px;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: aliceblue;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: rgb(2, 9, 37);
+}
+form .button input:hover{
+    background: rgb(14, 24, 68);
+}
+
+/* Footer */
+.footer{
+    /* bottom: 0; */
+    margin-top: auto;
+    width: 100vw;
+    background-color: rgba(2, 9, 37, 0.5);
+    padding-top: 40px;
+    color: aliceblue;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 30px;
+    line-height: 20px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 20px 0;
+}
+.socials li{
+    margin: 7px;
+}
+.socials a img{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+.footer-bottom{
+    width: 100vw;
+    padding: 12px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.footer-bottom p{
+    font-size: 13px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom name{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 300;
+}
